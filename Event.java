@@ -19,3 +19,91 @@ public class Event extends Society implements Serializable {
     private int nca;
     private int ncb;
 
+    public Event() {
+        this.Event_ID = ++LastId;
+        this.bo = false;
+    }
+
+    public String getEvent_Name() {
+        return Event_Name;
+    }
+
+    public void setEvent_Name(String event_Name) {
+        Event_Name = event_Name;
+    }
+
+    public String getEvent_Venue() {
+        return Event_Venue;
+    }
+
+    public void setEvent_Venue(String event_Venue) {
+        Event_Venue = event_Venue;
+    }
+
+    public String getEvent_Day() {
+        return Event_Day;
+    }
+
+    public void setEvent_Day(String event_Day) {
+        Event_Day = event_Day;
+    }
+
+    public String getEvent_Date() {
+        return Event_Date;
+    }
+
+    public void setEvent_Date(String event_Date) {
+        Event_Date = event_Date;
+    }
+
+    public String getEvent_Time_Start() {
+        return Event_Time_Start;
+    }
+
+    public void setEvent_Time_Start(String event_Time_Start) {
+        Event_Time_Start = event_Time_Start;
+    }
+
+    public String getEvent_Time_End() {
+        return Event_Time_End;
+    }
+
+    public void setEvent_Time_End(String event_Time_End) {
+        Event_Time_End = event_Time_End;
+    }
+
+    public void setEvent_Check(String event_Check) {
+        Event_Check = event_Check;
+    }
+
+    public String getEvent_Check() {
+        return Event_Check;
+    }
+
+    public void setDecor_Event_Check(String decor_Event_Check) {
+        Decor_Event_Check = decor_Event_Check;
+    }
+
+    public String getDecor_Event_Check() {
+        return Decor_Event_Check;
+    }
+
+    public Decoration[] getDea() {
+        return dea;
+    }
+
+    public void setDea(Decoration[] dea) {
+        this.dea = dea;
+    }
+
+    public boolean isBo() {
+        return bo;
+    }
+
+    public void setBo(boolean bo) {
+        this.bo = bo;
+    }
+
+    public int getEvent_ID() {
+        return Event_ID;
+    }
