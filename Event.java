@@ -107,3 +107,28 @@ public class Event extends Society implements Serializable {
     public int getEvent_ID() {
         return Event_ID;
     }
+
+        public void Request_For_Event_User() {
+        System.out.print("Enter Event Name----------------------------------: ");
+        this.Event_Name = emm.getSc().nextLine();
+        System.out.print("Enter Society Name Which is Conducting the Event--: ");
+        setSociety_Name(emm.getSc().nextLine());
+        try {
+            System.out.print("How many Organizers are of the Event--------------: ");
+            this.nca = emm.getSc().nextInt();
+            emm.getSc().nextLine();
+            for (int i = 0; i < nca; i++) {
+                getOra()[i] = new Organizer();
+                System.out.println("Enter Info of--- " + (i + 1) + " ---Organizer");
+                System.out.print("Enter Name Of Organizer---: ");
+                getOra()[i].setOrganizer_Name(emm.getSc().nextLine());
+                System.out.print("Enter Registration No-----: ");
+                getOra()[i].setOrganizer_Reg_No(emm.getSc().nextLine());
+                System.out.print("Enter Phone_No------------: ");
+                getOra()[i].setOrganizer_Ph_No(emm.getSc().nextLine());
+                System.out.println();
+            }
+        } catch (InputMismatchException ex) {
+        } catch (Exception exc) {
+        }
+    }
