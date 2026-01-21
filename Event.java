@@ -177,3 +177,19 @@ public class Event extends Society implements Serializable {
             exc.printStackTrace();
         }
     }
+
+        public void Allot_Event_Venue_Admin() {
+        System.out.println("---------------------------------");
+        System.out.println("ID of Event  " + this.Event_ID);
+        System.out.println("Enter Event Venue");
+        this.Event_Venue = emm.getSc().nextLine();
+        System.out.println("Enter Event Date");
+        this.Event_Date = emm.getSc().nextLine();
+        System.out.println("Enter Event Day");
+        this.Event_Day = emm.getSc().nextLine();
+        System.out.println("Enter Starting Time ");
+        this.Event_Time_Start = emm.getSc().nextLine();
+        System.out.println("Enter Ending Time");
+        this.Event_Time_End = emm.getSc().nextLine();
+        System.out.println("-----------------------");
+    }
