@@ -146,3 +146,17 @@ public class Event extends Society implements Serializable {
 
         }
     }
+
+        public void View_Request_Event_Admin() {
+        System.out.println("Event ID-----: " + this.Event_ID);
+        System.out.println("Event Name---: " + this.Event_Name);
+        System.out.println("Society Name-: " + getSociety_Name());
+        System.out.println("***ORGANIZERS***");
+        for (int i = 0; i < this.nca; i++) {
+            System.out.println("Organizer Detail --- " + (i + 1) + " ---");
+            System.out.println("Name Of Organizer--: " + getOra()[i].getOrganizer_Name());
+            System.out.println("Registration No----: " + getOra()[i].getOrganizer_Reg_No());
+            System.out.println("Phone No-----------: " + getOra()[i].getOrganizer_Ph_No());
+
+        }
+    }
