@@ -160,3 +160,20 @@ public class Event extends Society implements Serializable {
 
         }
     }
+
+        public void Action_On_Event_Request_Admin() {
+        System.out.println("->Accept ....1");
+        System.out.println("->Reject.....2");
+        try {
+            int een = emm.getSc().nextInt();
+            emm.getSc().nextLine();
+            if (een == 1) {
+                this.Event_Check = "Accepted";
+            } else {
+                this.Event_Check = "Rejected";
+            }
+        } catch (InputMismatchException ex) {
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+    }
