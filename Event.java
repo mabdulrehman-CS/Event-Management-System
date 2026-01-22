@@ -193,3 +193,99 @@ public class Event extends Society implements Serializable {
         this.Event_Time_End = emm.getSc().nextLine();
         System.out.println("-----------------------");
     }
+
+        public void View_Event_Venue_User() {
+        View_Request_Event_User();
+        System.out.println("---------------------------------");
+        System.out.println("Venue of Event ---" + this.Event_Venue);
+        System.out.println("Date of Event-----" + this.Event_Date);
+        System.out.println("Day of Event------" + this.Event_Day);
+        System.out.println("Starting Time of Event--" + this.Event_Time_Start);
+        System.out.println("Ending Time of Event----" + this.Event_Time_End);
+
+    }
+
+    public void Request_For_Decoration_User() {
+        dea = new Decoration[50];
+        System.out.print("How Many Items You Want To Enter:  ");
+        try {
+            this.ncb = emm.getSc().nextInt();
+            emm.getSc().nextLine();
+            for (int i = 0; i < this.ncb; i++) {
+                dea[i] = new Decoration();
+                System.out.println("Enter Info------: " + (i + 1));
+                System.out.println("Enter Item----: ");
+                dea[i].setDcoration_Items(emm.getSc().nextLine());
+                System.out.print("Enter Quantity--: ");
+                dea[i].setDecoration_Items_Quantity(emm.getSc().nextInt());
+                emm.getSc().nextLine();
+            }
+        } catch (InputMismatchException ex) {
+        } catch (Exception exc) {
+        }
+    }
+
+    public void View_Decoration_Request_User() {
+        System.out.println("My Request Details");
+        System.out.println("Event Id------: " + this.Event_ID);
+        System.out.println("Event Name----: " + this.Event_Name);
+        System.out.println("Society Name--: " + getSociety_Name());
+        for (int i = 0; i < this.ncb; i++) {
+            System.out.println("Item Name------: " + dea[i].getDcoration_Items());
+            System.out.println("Item Quantity--: " + dea[i].getDecoration_Items_Quantity());
+        }
+
+    }
+
+    public void View_Decoration_Request_Admin() {
+        System.out.println("Event Id------: " + this.Event_ID);
+        System.out.println("Event Name----: " + this.Event_Name);
+        System.out.println("Society Name--: " + getSociety_Name());
+        for (int i = 0; i < this.ncb; i++) {
+            System.out.println("Item Name------: " + dea[i].getDcoration_Items());
+            System.out.println("Item Quantity--: " + dea[i].getDecoration_Items_Quantity());
+        }
+    }
+
+    public void Action_On_Event_Decoration_Admin() {
+        View_Decoration_Request_Admin();
+        System.out.println("->Accept ....1");
+        System.out.println("->Reject.....2");
+        try {
+            int een = emm.getSc().nextInt();
+            emm.getSc().nextLine();
+            if (een == 1) {
+                this.Decor_Event_Check = "Accepted";
+            } else {
+                this.Decor_Event_Check = "Rejected";
+            }
+        } catch (InputMismatchException ex) {
+        } catch (Exception exc) {
+        }
+    }
+
+    public void View_Event_Public() {
+        System.out.println("---------------------------------------");
+        System.out.println("Event Name-----------:" + getEvent_Name());
+        System.out.println("Society Name---------:" + getSociety_Name());
+        System.out.println("Event Date-----------:" + getEvent_Date());
+        System.out.println("Event Day------------:" + getEvent_Day());
+        System.out.println("Event Venue----------:" + getEvent_Venue());
+        System.out.println("Event Starting Time--:" + getEvent_Time_Start());
+        System.out.println("Event Ending Time----:" + getEvent_Time_End());
+        for (int i = 0; i < this.nca; i++) {
+            System.out.println("Organizer Detail --- " + (i + 1) + " ---");
+            System.out.println("Name Of Organizer--: " + getOra()[i].getOrganizer_Name());
+            System.out.println("Phone No-----------: " + getOra()[i].getOrganizer_Ph_No());
+        }
+        System.out.println("---------------------------------------");
+    }
+
+    public static void saveEventData(List<Event> eventList) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Event.txt", true))) {
+            oos.writeObject(eventList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
