@@ -37,61 +37,6 @@ A comprehensive Event Management System built using Java with Object-Oriented Pr
 - See stall details and duration
 - Read-only access to public information
 
-## System Architecture
-
-### Core Components:
-
-**Main.java** - Application Entry Point
-- Menu-driven interface
-- Navigation system
-- State management
-- File I/O operations
-
-**Event.java** - Event Entity (extends Society)
-- Event properties (name, venue, date, time)
-- Status tracking (pending/approved/rejected)
-- Organizer management
-- Decoration requests
-- Serialization support
-
-**Stall.java** - Stall Entity (extends Student)
-- Stall information
-- Student association
-- Date management
-- Status tracking
-- Persistent storage
-
-**Student.java** - Student Information
-- Student details
-- Department and semester
-- Base class for stalls
-
-**Society.java** - Society Management
-- Society information
-- Society head details
-- Base class for events
-
-**Organizer.java** - Event Organizer Details
-- Organizer name and phone
-- Designation management
-- Event association
-
-**Security.java** - Authentication System
-- Admin sign-up and login
-- Password encryption
-- Security key verification (1.1)
-- Session management
-- Failed login attempt tracking
-
-**Decoration.java** - Decoration Management
-- Decoration requests
-- Event decoration tracking
-
-**Example.java** - Utility Class
-- Helper functions
-- Input validation
-- Scanner management
-
 ## How It Works
 
 ### System Workflow:
@@ -360,82 +305,12 @@ The system includes robust error handling for:
 - Null pointer exceptions
 - Failed login attempts
 
-## Limitations
-
-1. Single admin account only
-2. No database integration
-3. No email notifications
-4. No GUI interface
-5. Plain text password storage
-6. No data backup mechanism
-7. Limited concurrent user support
-
-## Future Enhancements
-
-### Phase 1:
-- [ ] GUI using JavaFX/Swing
-- [ ] Multiple admin accounts
-- [ ] User registration system
-- [ ] Password encryption
-
-### Phase 2:
-- [ ] Database integration (MySQL/PostgreSQL)
-- [ ] Email notifications
-- [ ] PDF report generation
-- [ ] Search and filter functionality
-
-### Phase 3:
-- [ ] Web interface (Spring Boot)
-- [ ] REST API development
-- [ ] Mobile application
-- [ ] Real-time updates
-- [ ] Analytics dashboard
-
-### Phase 4:
-- [ ] Multi-language support
-- [ ] Calendar integration
-- [ ] Payment gateway
-- [ ] QR code generation
-- [ ] Attendance tracking
-
-## Troubleshooting
-
-### Common Issues:
-
-**Problem:** File not found errors on first run  
-**Solution:** Normal behavior - files created automatically
-
-**Problem:** Can't login as admin  
-**Solution:** Ensure you've signed up first with security key 1.1
-
-**Problem:** "Wrong Security Key" message  
-**Solution:** Use exactly **1.1** (decimal) not 1234 or other values
-
-**Problem:** Compilation errors  
-**Solution:** Ensure JDK 8+ installed, compile all files together
-
-**Problem:** Data not persisting  
-**Solution:** Check write permissions in directory
-
-## Contributing
-
-This is an educational project demonstrating OOP concepts. Contributions welcome for:
-- Bug fixes
-- Feature enhancements
-- Documentation improvements
-- Code optimization
-
 ## License
 Educational project for demonstrating Object-Oriented Programming concepts in Java.
 
 ## Author
 **Muhammad Abdul Rehman**
 - GitHub: [@mabdulrehman-CS](https://github.com/mabdulrehman-CS)
-
-## Acknowledgments
-- Object-Oriented Programming course project
-- Java documentation and tutorials
-- Stack Overflow community
 
 ---
 
@@ -449,4 +324,4 @@ Educational project for demonstrating Object-Oriented Programming concepts in Ja
 
 ---
 
-**Note**: This system is designed for educational purposes to demonstrate OOP principles. For production use, implement proper security measures, database integration, and error handling.
+**Note**: This system is designed for educational purposes to demonstrate OOP principles.
