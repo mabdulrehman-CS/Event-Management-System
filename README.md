@@ -244,22 +244,6 @@ java Main
 ✅ Data retrieval on startup  
 ✅ Error handling for file operations  
 
-## Technical Specifications
-
-### Classes and Responsibilities:
-
-| Class | Purpose | Key Methods |
-|-------|---------|-------------|
-| Main | Entry point, menu system | main(), navigation |
-| Event | Event entity | getters/setters, status management |
-| Stall | Stall entity | getters/setters, status management |
-| Security | Authentication | Sign_up(), Login(), validation |
-| Student | Student info | getters/setters |
-| Society | Society info | getters/setters |
-| Organizer | Organizer details | getters/setters |
-| Decoration | Decoration management | request handling |
-| Example | Utilities | input validation, helpers |
-
 ### File Structure:
 ```
 Event Management System (OOP)/
@@ -279,22 +263,6 @@ Event Management System (OOP)/
 └── README.md           # Documentation
 ```
 
-## Security Considerations
-
-⚠️ **Important Security Notes:**
-- Default security key: **1.1** (change in production)
-- Passwords stored in plain text (for educational purposes)
-- File-based storage (not suitable for production)
-- No encryption implemented
-- Single admin account supported
-
-**Production Recommendations:**
-- Implement password hashing (BCrypt/SHA-256)
-- Use database instead of files
-- Add encryption for sensitive data
-- Support multiple admin accounts
-- Implement role-based access control
-
 ## Error Handling
 
 The system includes robust error handling for:
@@ -304,23 +272,6 @@ The system includes robust error handling for:
 - Number format exceptions
 - Null pointer exceptions
 - Failed login attempts
-
-## License
-Educational project for demonstrating Object-Oriented Programming concepts in Java.
-
-## Author
-**Muhammad Abdul Rehman**
-- GitHub: [@mabdulrehman-CS](https://github.com/mabdulrehman-CS)
-
----
-
-## Quick Reference
-
-### Security Key: `1.1`
-### Default Files: `Event.txt`, `Stall.txt`, `SecurityPassward.txt`, `Variables.txt`
-### Compile: `javac *.java`
-### Run: `java Main`
-### Menu Options: 1=Admin, 2=User, 3=Public, 4=Exit
 
 ---
 
